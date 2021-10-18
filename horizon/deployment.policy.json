@@ -53,12 +53,16 @@
             "value": "LoPzCu9OpdvNawg1wnusvEu0WlEOdeteqSN1pjv6iFfoSSezDcPNINsf8lgE7Dog"
         },
         {
+          "name": "kafka_certs_path",
+          "value": "./certs"
+        },
+        {
           "name": "TWILIO_TOKEN",
-          "value": "d498bb84ceb30ed9985f56a1adc04asd"
+          "value": "d498bb84ceb30ed9985f56a1adc04111"
         },
         {
           "name": "SLACK_WEBHOOK",
-          "value": "https://hooks.slack.com/services/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"
+          "value": "https://hooks.slack.com/services/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"
         }
       ]
     }

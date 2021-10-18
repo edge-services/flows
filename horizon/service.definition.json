@@ -9,7 +9,7 @@
     "arch": "$ARCH",
     "sharable": "multiple",
     "requiredServices": [],
-    "userInputs": [
+    "userInput": [
         {
             "name": "TITLE",
             "label": "Title",
@@ -51,6 +51,12 @@
             "label": "kafka_password",
             "type": "string",
             "defaultValue": "LoPzCu9OpdvNawg1wnusvEu0WlEOdeteqSN1pjv6iFfoSSezDcPNINsf8lgE7Dog"
+        },
+        {
+            "name": "kafka_certs_path",
+            "label": "kafka_certs_path",
+            "type": "string",
+            "defaultValue": "./certs"
         },
         {
             "name": "TWILIO_TOKEN",
