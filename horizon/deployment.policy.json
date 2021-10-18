@@ -42,11 +42,15 @@
         },
         {
             "name": "kafka_brokers",
-            "value": "broker-1-0lr3601j3vcp93dp.kafka.svc05.us-south.eventstreams.cloud.ibm.com:9093,broker-4-0lr3601j3vcp93dp.kafka.svc05.us-south.eventstreams.cloud.ibm.com:9093,broker-2-0lr3601j3vcp93dp.kafka.svc05.us-south.eventstreams.cloud.ibm.com:9093,broker-3-0lr3601j3vcp93dp.kafka.svc05.us-south.eventstreams.cloud.ibm.com:9093,broker-5-0lr3601j3vcp93dp.kafka.svc05.us-south.eventstreams.cloud.ibm.com:9093,broker-0-0lr3601j3vcp93dp.kafka.svc05.us-south.eventstreams.cloud.ibm.com:9093"
+            "value": "pkc-lzvrd.us-west4.gcp.confluent.cloud:9092"
+        },
+        {
+          "name": "kafka_username",
+          "value": "NFYTLPG6OFCRX5TO"
         },
         {
             "name": "kafka_password",
-            "value": "oW2MuJ8XIOqjr4T3fzXXhqlrVKqcstOuVGWFFkAd3333"
+            "value": "LoPzCu9OpdvNawg1wnusvEu0WlEOdeteqSN1pjv6iFfoSSezDcPNINsf8lgE7Dog"
         },
         {
           "name": "TWILIO_TOKEN",
@@ -54,7 +58,7 @@
         },
         {
           "name": "SLACK_WEBHOOK",
-          "defaultValue": "https://hooks.slack.com/services/THSKTR2CE/B024A9YU91N/JnWFxZhBYuCHC2og6kX3333"
+          "defaultValue": "https://hooks.slack.com/services/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"
         }
       ]
     }
