@@ -50,15 +50,15 @@
         },
         {
             "name": "kafka_password",
-            "value": "LoPzCu9OpdvNawg1wnusvEu0WlEOdeteqSN1pjv6iFfoSSezDcPNINsf8lgE7Dog"
+            "value": "LoPzCu9OpdvNawg1wnusvEu0WlEOdeteqSN1pjv6iFfoSSezDcPNINsf8lgE7Cow"
         },
         {
           "name": "TWILIO_TOKEN",
-          "defaultValue": "d498bb84ceb30ed9985f56a1adc03333"
+          "defaultValue": "d498bb84ceb30ed9985f56a1adc04bd6"
         },
         {
           "name": "SLACK_WEBHOOK",
-          "defaultValue": "https://hooks.slack.com/services/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"
+          "defaultValue": "https://hooks.slack.com/services/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"
         }
       ]
     }
