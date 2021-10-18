@@ -37,7 +37,7 @@ jobs:
           NODE_VERSION=12.22.1
           NODE_RED_VERSION=^1.3.4
           OS=buster-slim
-          ARCH=arm
+          ARCH=arm32v7
           SUFFIX=arm
 
           if [[ $GITHUB_REF == refs/tags/* ]]; then
