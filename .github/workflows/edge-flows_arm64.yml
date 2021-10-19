@@ -35,7 +35,7 @@ jobs:
           DOCKER_PLATFORMS=linux/arm64
           VERSION=1.0.0
           NODE_VERSION=12.22.1
-          NODE_RED_VERSION=^1.3.4
+          NODE_RED_VERSION=^2.0.6
           OS=buster-slim
           ARCH=arm64v8
           SUFFIX=arm64

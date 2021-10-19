@@ -19,13 +19,6 @@
         "enable_ssl_certificate_verification": false
     },
     {
-        "id": "7b41e693.b2d488",
-        "type": "twilio-api",
-        "name": "SMS",
-        "sid": "ACa04c6268f7b699fd889b4551b21ff445",
-        "from": "+1 312 629 4417"
-    },
-    {
         "id": "f44b52ae.b42a8",
         "type": "rdkafka-secure out",
         "z": "9602a786.50d2c",
