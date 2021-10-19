@@ -62,13 +62,13 @@
             "name": "TWILIO_TOKEN",
             "label": "TWILIO_TOKEN",
             "type": "string",
-            "defaultValue": "d498bb84ceb30ed9985f56a1adc04111"
+            "defaultValue": "d498bb84ceb30ed9985f56a1adc04ce7"
         },
         {
             "name": "SLACK_WEBHOOK",
             "label": "SLACK_WEBHOOK",
             "type": "string",
-            "defaultValue": "https://hooks.slack.com/services/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"
+            "defaultValue": "https://hooks.slack.com/services/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"
         }
     ],
     "deployment": {
