@@ -1,7 +1,7 @@
 require("dotenv").config();
 console.log('TITLE: >> ', process.env.TITLE);
 module.exports = {
-    credentialSecret: process.env.NODE_RED_CREDENTIAL_SECRET, // add exactly this
+    credentialSecret: false, // add exactly this
     editorTheme: {
         page: {
             title: process.env.TITLE = 'Edge Rules',
