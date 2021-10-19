@@ -9,7 +9,7 @@
     "arch": "$ARCH",
     "sharable": "multiple",
     "requiredServices": [],
-    "userInput": [
+    "userInputs": [
         {
             "name": "TITLE",
             "label": "Title",
@@ -50,7 +50,7 @@
             "name": "kafka_password",
             "label": "kafka_password",
             "type": "string",
-            "defaultValue": "LoPzCu9OpdvNawg1wnusvEu0WlEOdeteqSN1pjv6iFfoSSezDcPNINsf8lgE7Dog"
+            "defaultValue": "LoPzCu9OpdvNawg1wnusvEu0WlEOdeteqSN1pjv6iFfoSSezDcPNINsf8lgE7Cow"
         },
         {
             "name": "kafka_certs_path",
@@ -62,13 +62,13 @@
             "name": "TWILIO_TOKEN",
             "label": "TWILIO_TOKEN",
             "type": "string",
-            "defaultValue": "d498bb84ceb30ed9985f56a1adc03333"
+            "defaultValue": "d498bb84ceb30ed9985f56a1adc04bd6"
         },
         {
             "name": "SLACK_WEBHOOK",
             "label": "SLACK_WEBHOOK",
             "type": "string",
-            "defaultValue": "https://hooks.slack.com/services/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"
+            "defaultValue": "https://hooks.slack.com/services/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"
         }
     ],
     "deployment": {

@@ -1,1 +1,116 @@
-[{"id":"9602a786.50d2c","type":"tab","label":"EdgeFlow","disabled":false,"info":""},{"id":"5a7cfff0.7e8bb8","type":"kafka-broker-secure","broker":"${kafka_brokers}","clientid":"detection-device","security_protocol":"sasl_ssl","sasl_mechanism":"PLAIN","ssl_ca_location":"${kafka_certs_path}","enable_ssl_certificate_verification":false},{"id":"7b41e693.b2d488","type":"twilio-api","name":"SMS","sid":"ACa04c6268f7b699fd889b4551b21ff445","from":"+1 312 629 4417"},{"id":"f44b52ae.b42a8","type":"rdkafka-secure out","z":"9602a786.50d2c","name":"Producer","topic":"detection","key":"","partition":-1,"broker":"5a7cfff0.7e8bb8","x":380,"y":120,"wires":[]},{"id":"ccbcb8dd.d74c4","type":"inject","z":"9602a786.50d2c","name":"test_detection","props":[{"p":"payload"},{"p":"topic","vt":"str"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"detection","payload":"{\"event\":\"FireDetected\",\"metadata\":{\"deviceId\":\"\",\"deviceCategory\":\"\",\"tenantId\":\"ibm\",\"customerId\":\"f057feb8-4045-4e56-b521-c46168c43c06\"},\"data\":{\"class\":\"Fire\",\"confidence\":77}}","payloadType":"json","x":160,"y":120,"wires":[["f44b52ae.b42a8"]]},{"id":"51c9ebb4.82b28c","type":"debug","z":"9602a786.50d2c","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","statusVal":"","statusType":"auto","x":390,"y":180,"wires":[]},{"id":"fc49b5b2.b65b5","type":"http in","z":"9602a786.50d2c","name":"EventsEndpoint","url":"/event","method":"post","upload":false,"swaggerDoc":"","x":140,"y":240,"wires":[["51c9ebb4.82b28c","f44b52ae.b42a8","f636c201.1fb5e8"]]},{"id":"f636c201.1fb5e8","type":"http response","z":"9602a786.50d2c","name":"Completed","statusCode":"","headers":{},"x":390,"y":240,"wires":[]}]
+[
+    {
+        "id": "9602a786.50d2c",
+        "type": "tab",
+        "label": "EdgeFlow",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "5a7cfff0.7e8bb8",
+        "type": "kafka-broker-secure",
+        "broker": "${kafka_brokers}",
+        "clientid": "detection-device",
+        "security_protocol": "sasl_ssl",
+        "sasl_mechanism": "PLAIN",
+        "sasl_username": "${kafka_username}",
+        "sasl_password": "${kafka_password}",
+        "ssl_ca_location": "${kafka_certs_path}",
+        "enable_ssl_certificate_verification": false
+    },
+    {
+        "id": "7b41e693.b2d488",
+        "type": "twilio-api",
+        "name": "SMS",
+        "sid": "ACa04c6268f7b699fd889b4551b21ff445",
+        "from": "+1 312 629 4417"
+    },
+    {
+        "id": "f44b52ae.b42a8",
+        "type": "rdkafka-secure out",
+        "z": "9602a786.50d2c",
+        "name": "Producer",
+        "topic": "detection",
+        "key": "",
+        "partition": -1,
+        "broker": "5a7cfff0.7e8bb8",
+        "x": 380,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "ccbcb8dd.d74c4",
+        "type": "inject",
+        "z": "9602a786.50d2c",
+        "name": "test_detection",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "detection",
+        "payload": "{\"event\":\"FireDetected\",\"metadata\":{\"deviceId\":\"\",\"deviceCategory\":\"\",\"tenantId\":\"ibm\",\"customerId\":\"f057feb8-4045-4e56-b521-c46168c43c06\"},\"data\":{\"class\":\"Fire\",\"confidence\":77}}",
+        "payloadType": "json",
+        "x": 160,
+        "y": 120,
+        "wires": [
+            [
+                "f44b52ae.b42a8"
+            ]
+        ]
+    },
+    {
+        "id": "51c9ebb4.82b28c",
+        "type": "debug",
+        "z": "9602a786.50d2c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 390,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "fc49b5b2.b65b5",
+        "type": "http in",
+        "z": "9602a786.50d2c",
+        "name": "EventsEndpoint",
+        "url": "/event",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 240,
+        "wires": [
+            [
+                "51c9ebb4.82b28c",
+                "f44b52ae.b42a8",
+                "f636c201.1fb5e8"
+            ]
+        ]
+    },
+    {
+        "id": "f636c201.1fb5e8",
+        "type": "http response",
+        "z": "9602a786.50d2c",
+        "name": "Completed",
+        "statusCode": "",
+        "headers": {},
+        "x": 390,
+        "y": 240,
+        "wires": []
+    }
+]
