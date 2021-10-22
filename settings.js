@@ -2,6 +2,21 @@ require("dotenv").config();
 console.log('TITLE: >> ', process.env.TITLE);
 module.exports = {
     credentialSecret: process.env.NODE_RED_CREDENTIAL_SECRET, // add exactly this
+    adminAuth: {
+        type: "credentials",
+        users: [
+            {
+                username: "admin",
+                password: "$2a$08$P1OZSS1YJrmQlQqYWpfa..wYVP1oNgBfYM7qSeYv32w0lgNySG2zy",
+                permissions: "*"
+            },
+            {
+                username: "guest",
+                password: "$2a$08$5IXpLcsPMzLy3fEGsgXKaeOOAgvaRKV5Q0p8KFkR424FMxmZO7tly",
+                permissions: "read"
+            }
+        ]
+    },
     editorTheme: {
         page: {
             title: process.env.TITLE = 'Edge Rules',
