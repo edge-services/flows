@@ -20,17 +20,20 @@ LABEL org.label-schema.build-date=${BUILD_DATE} \
 USER root
 
 # Updates and adds system required packages
-RUN set -ex && \
-    apk add --no-cache \
-        bash \
-        curl \
-        nano \
-        openssl \
-        openssh-client \
-        ca-certificates make
+RUN apk --no-cache add \
+      bash \
+      g++ \
+      ca-certificates \
+      lz4-dev \
+      musl-dev \
+      cyrus-sasl-dev \
+      openssl-dev \
+      make \
+      python
 
 # Install Build tools
-RUN apk add --no-cache --virtual buildtools build-base linux-headers udev python
+# RUN apk add --no-cache --virtual buildtools build-base linux-headers udev python
+RUN apk add --no-cache --virtual .build-deps gcc zlib-dev libc-dev bsd-compat-headers py-setuptools bash
 
 RUN mkdir -p /usr/src/node-red
 WORKDIR /usr/src/node-red
