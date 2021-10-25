@@ -7,12 +7,12 @@ module.exports = {
         users: [
             {
                 username: "admin",
-                password: "$2a$08$P1OZSS1YJrmQlQqYWpfa..wYVP1oNgBfYM7qSeYv32w0lgNySG2zy",
+                password: "$2a$08$SgrlUBf5Y2Z6ajtJl0/EuONfPH5zP4N5zOwSRWSTUd5xmK4himDDy",
                 permissions: "*"
             },
             {
                 username: "guest",
-                password: "$2a$08$5IXpLcsPMzLy3fEGsgXKaeOOAgvaRKV5Q0p8KFkR424FMxmZO7tly",
+                password: "$2a$08$fOkVKkB/gAFHVMA3YXzR6OiLyzprOAHwlNvjq8kDKB.gdxriTxU2u",
                 permissions: "read"
             }
         ]

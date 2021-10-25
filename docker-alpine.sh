@@ -1,16 +1,31 @@
 #!/bin/bash
-export NODE_RED_VERSION=$(grep -oE "\"node-red\": \"(\w*.\w*.\w*.\w*.\w*.)" package.json | cut -d\" -f4)
+export APP_VERSION=1.0.0
+export ARCH=arm64v8
+export NODE_VERSION=12.22.1
+export OS=alpine
 
 echo "#########################################################################"
-echo "node-red version: ${NODE_RED_VERSION}"
+echo "Build EdgeFlows Service version: ${APP_VERSION} for ${ARCH}"
 echo "#########################################################################"
 
-docker build --rm --no-cache \
-    --build-arg ARCH=arm64v8 \
-    --build-arg NODE_VERSION=12.22.1 \
-    --build-arg NODE_RED_VERSION=${NODE_RED_VERSION} \
-    --build-arg OS=alpine \
-    --build-arg BUILD_DATE="$(date +"%Y-%m-%dT%H:%M:%SZ")" \
-    --build-arg TAG_SUFFIX=1.0.0 \
+# sudo docker buildx build \
+#   --push -t sinny777/security_arm64:0.0.1 \
+#   --platform=linux/arm64 .
+
+sudo docker buildx build --rm  \
+    --build-arg ARCH=${ARCH} \
+    --build-arg VERSION=${APP_VERSION} \
+    --build-arg NODE_VERSION=${NODE_VERSION} \
+    --build-arg OS=${OS} \
+    --build-arg TAG_SUFFIX=${TAG_SUFFIX} \
+    --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') \
     --file Dockerfile.alpine \
-    --tag sinny777/edge-flows_arm64:1.0.0 .
+    --tag sinny777/edge-flows:${APP_VERSION} \
+    --platform=linux/arm64v8 --push .
+
+# sudo docker build --rm  \
+#     --build-arg BUILD_DATE="$(date +"%Y-%m-%dT%H:%M:%SZ")" \
+#     --build-arg NODE_VERSION=12.22.1 \
+#     --build-arg TAG_SUFFIX=${APP_VERSION} \
+#     --file Dockerfile.custom \
+#     --tag sinny777/edge-gateway_${ARCH}:${APP_VERSION} .

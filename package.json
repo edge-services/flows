@@ -24,7 +24,8 @@
     "dotenv": "^10.0.0",
     "node-red": "^2.0.6",
     "node-red-contrib-rdkafka-secure": "^0.3.0",
-    "node-red-contrib-slack-files": "~0.1.2"
+    "node-red-contrib-slack-files": "~0.1.2",
+    "node-red-contrib-localtunnel": "~1.0.0-2"
   },
   "engines": {
     "node": ">=10"
